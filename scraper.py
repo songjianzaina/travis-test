@@ -36,8 +36,8 @@ def scrape(language, filename):
     r = requests.get(url, headers=HEADERS)
     assert r.status_code == 200
 
-    # print(r.encoding)
-
+    print(r.encoding)
+    print("请求成功")
     d = pq(r.content)
     items = d('div.Box article.Box-row')
 
