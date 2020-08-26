@@ -10,7 +10,7 @@ script:
   - git config user.email travis_roboot@qq.com
   - git add .
   - git commit -m "Travis CI 自动提交 at `date +"%Y-%m-%d %H:%M"`" # 提交记录包含时间
-  - git push --force --quiet https://c64e5372668f26abf03d54d0429b35d5621ed6e2@github.com/songjianzaina/travis-test.git  master:master #GH_TOKEN是在Travis中配置环境变量的名称
+  - git push --force --quiet https://f1b90d616669ca836fc239fe16f83904e76d678d@github.com/songjianzaina/travis-test.git  master:master #GH_TOKEN是在Travis中配置环境变量的名称
 env:
   global:
   - GH_REF: github.com/songjianzaina/travis-test.git
