@@ -6,11 +6,9 @@ install: "pip install -r requirements.txt"
 # command to run tests
 script:
   - python3 scraper.py
-  - git config user.name travis_roboot
-  - git config user.email travis_roboot@qq.com
   - git add .
-  - git commit -m "Travis CI 自动提交 at `date +"%Y-%m-%d %H:%M"`" # 提交记录包含时间
-  - git push --force --quiet https://f1b90d616669ca836fc239fe16f83904e76d678d@github.com/songjianzaina/travis-test.git  master:master #GH_TOKEN是在Travis中配置环境变量的名称
+  - git commit -m "自动提交" # 提交记录包含时间
+  - git push --force --quiet https://e96984f4d965019546f108ef01d565a17210f793@github.com/songjianzaina/travis-test.git  master:master #GH_TOKEN是在Travis中配置环境变量的名称
 env:
   global:
   - GH_REF: github.com/songjianzaina/travis-test.git
