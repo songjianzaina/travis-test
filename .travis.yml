@@ -6,9 +6,13 @@ install: "pip install -r requirements.txt"
 # command to run tests
 script:
   - python3 scraper.py
-  - git add .
-  - git commit -m "自动提交" # 提交记录包含时间
-  - git push https://e96984f4d965019546f108ef01d565a17210f793@github.com/songjianzaina/travis-test.git  master:master #GH_TOKEN是在Travis中配置环境变量的名称
+  -git config --global user.name "bonfy"
+  -git config --global user.email "foreverbonfy@163.com"
+  
+  -git add -A
+  -git commit -m $(date '+%Y-%m-%d')
+  -git push
+
 env:
   global:
   - GH_REF: github.com/songjianzaina/travis-test.git
